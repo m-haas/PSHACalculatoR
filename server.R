@@ -161,7 +161,7 @@ shinyServer(function(input, output) {
   })
   
   ###################################################################
-  # Calculation of PHA [cm/s?] (GMPE: Cornell 1979 in Kramer)       #
+  # Calculation of PHA [cm/s2] (GMPE: Cornell 1979 in Kramer)       #
   ###################################################################
   # a) fixed Distance vector/Only one Magnitude
   getPHA <- reactive({
@@ -356,7 +356,7 @@ shinyServer(function(input, output) {
     #plot GMPE
     R <- seq(1,300,1)
     plot(R,exp(lnPha + input$gmpeSig),log="xy",pch="+",col="red",
-         xlab="Distance [km]",ylab="PHA [cm/s?]",
+         xlab="Distance [km]",ylab="PHA [cm/s2]",
          main="PHA (GMPE: Cornell 1979)")
     points(R,exp(lnPha),pch="+",)
     points(R,exp(lnPha - input$gmpeSig),col="red",pch="+",)
