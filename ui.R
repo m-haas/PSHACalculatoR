@@ -42,7 +42,8 @@ shinyUI(pageWithSidebar(
                # GMPE parameters 
                numericInput("gmpeMw","Mw",5),
                sliderInput("gmpeSig", "Sigma", min=0.41, max=0.9, value=0.57, step = 0.01,
-                           round = FALSE, format = "#,##0.#####", locale = "us",
+                           #round = FALSE, format = "#,##0.#####", locale = "us",
+                           round = FALSE, sep=",",
                            ticks = TRUE, animate = FALSE)
               ),
       tabPanel("Exceedance Probability/Mean Annual Rate",

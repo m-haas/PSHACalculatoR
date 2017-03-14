@@ -1,8 +1,6 @@
 #######################################################
-# YURT                                                #
 #                                                     #
-# Webapplication to calculate Seismic Risk in Central # 
-# Asia.                                               # 
+# Webapplication to calculate Seismic Hazard          # 
 #                                                     #
 # Original Matlab program by Dr. Dino Bindi           #
 # bindi@gfz-potsdam.de                                #  
@@ -16,7 +14,8 @@
 # - "raster"-package: install.packages("raster")      #
 # - "maptools"-package: install.packages("maptools")  #
 # - "sp"-package: install.packages("sp")              #
-# - "pracma"-package: install.packages("pracma")
+# - "sgeostat"-package: install.packages("sgeostat")  #
+# - "pracma"-package: install.packages("pracma")      #
 #                                                     #
 # also required: Webbrowser                           #
 #                                                     #

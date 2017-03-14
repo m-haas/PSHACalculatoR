@@ -323,7 +323,8 @@ shinyServer(function(input, output) {
       #changing density to relative/probability(assumed source homogeneity)
       h$density <- h$counts/sum(h$counts)
       #ploting histogram
-      plot(h,freq=F,breaks=h$breaks,col="blue",
+      #plot(h,freq=F,breaks=h$breaks,col="blue",
+      plot(h,freq=F,col="blue",
            main="Distance Probabilities",
            xlab="Distance [km]",ylab="Probability",axes=F)
       axis(2)
@@ -357,8 +358,10 @@ shinyServer(function(input, output) {
     plot(R,exp(lnPha + input$gmpeSig),log="xy",pch="+",col="red",
          xlab="Distance [km]",ylab="PHA [cm/s?]",
          main="PHA (GMPE: Cornell 1979)")
-    points(R,exp(lnPha),log="xy",pch="+",)
-    points(R,exp(lnPha - input$gmpeSig),log="xy",col="red",pch="+",)
+    points(R,exp(lnPha),pch="+",)
+    points(R,exp(lnPha - input$gmpeSig),col="red",pch="+",)
+    #points(R,exp(lnPha),log="xy",pch="+",)
+    #points(R,exp(lnPha - input$gmpeSig),log="xy",col="red",pch="+",)
     legend("topright", c("mean PHA","PHA +/- 1 sigma","120 % mean-PHA-Level"),pch=c("+","+","-"),col=c('black','red','blue'))
     
     #plot pdf
